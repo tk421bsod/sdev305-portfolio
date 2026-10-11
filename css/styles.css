@@ -29,6 +29,11 @@ h2, a {
     font-size: 14pt;
 }
 
+.section-item {
+    margin-bottom: 1rem;
+}
+
+
 main {
     margin: 4rem auto;
     background-color: var(--container-background);
@@ -81,6 +86,10 @@ a:hover::after {
     transform-origin: bottom left;
 }
 
-.section-item {
-    margin-bottom: 1rem;
+ul {
+    list-style-type: "> ";
+}
+
+li::marker {
+    font-weight: bold;
 }
