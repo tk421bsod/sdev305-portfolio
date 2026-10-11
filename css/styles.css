@@ -10,6 +10,12 @@
     margin-bottom: 0px;
 }
 
+body {
+    font-family: Tahoma, sans-serif;
+    background-color: var(--main-background);
+    font-size: 12pt;
+}
+
 #header {
     font-size: 28pt;
 }
@@ -19,24 +25,38 @@ h1 {
     margin-bottom: 15px;
 }
 
-body {
-    font-family: Tahoma, sans-serif;
-    background-color: var(--main-background);
+h2, a {
+    font-size: 14pt;
 }
 
-#main {
+main {
     margin: 4rem auto;
     background-color: var(--container-background);
     width: 70%;
     padding: 1rem 3rem 1rem 3rem;
     border-radius: 20px;
-    /*box-shadow: 0px 0px 20px 20px var(--container-background);*/
+    display: grid;
+}
+
+.header-links {
+    display: grid;
+}
+
+@media (min-width: 720px) {
+    .header-links {
+        grid-template-columns: repeat(3, 1fr);
+        place-items: center;
+    }
+    #header-section {
+        text-align: center;
+    }
 }
 
 a {
     text-decoration: none;
     position: relative;
     color: blue;
+    width: fit-content;
 }
 
 a::after {
@@ -56,4 +76,8 @@ a::after {
 a:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
+}
+
+.section-item {
+    margin-bottom: 1rem;
 }
