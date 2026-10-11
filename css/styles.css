@@ -81,7 +81,7 @@ a::after {
     transform-origin: bottom right;
 }
 
-a:hover::after {
+a:hover::after, a:focus::after, a:active::after {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
